@@ -17,13 +17,12 @@ def play():
     available_options = (r, p, s)
     # Get the user's selected element.
     while True:
-        selected_option = input("\nPick an element (Rock, Paper, Scissors)\n-> ")
-        if selected_option.lower() not in available_options:
-            print("Please pick up an element.")
-            continue
-        else:
+        user_element = input("\nSelect an element (Rock, Paper, Scissors): ").lower()
+        if user_element in available_options:
             break
-    user_element = selected_option
+        else:
+            print("Please select an element.")
+            continue
     # Get the computer's selected element.
     pc_element = random.choice(available_options)
     # Define the logic if the game.
@@ -31,27 +30,23 @@ def play():
     # Rock > Scissors, Paper > Rock, Scissors > Paper => Win
     # Other than that => Lose
     if user_element == pc_element:
-        print(f"User: {user_element}")
-        print(f"Computer: {pc_element}")
+        print("\nUser: ", user_element.title())
+        print("Computer: ", pc_element.title())
         print("\nDraw")
         input("\nPress any key to continue...")
-    elif (
-        user_element == r and pc_element == s or
-        user_element == p and pc_element == r or
-        user_element == s and pc_element == p
-        ):
-        print(f"User: {user_element}")
-        print(f"Computer: {pc_element}")
-        print("\nUser won!!!")
-        print("Computer lost!!!")
+    elif (user_element == r and pc_element == s) or (user_element == p and pc_element == r) or (user_element == s and pc_element == p):
+        print("\nUser: ", user_element.title())
+        print("Computer: ", pc_element.title())
+        print("\nUser Won")
+        print("Computer Lost")
         input("\nPress any key to continue...")
-    else:
-        print(f"User: {user_element}")
-        print(f"Computer: {pc_element}")
-        print("\nUser lost!!!")
-        print("Computer won!!!")
+    elif (pc_element == r and user_element == s) or (pc_element == p and user_element == r) or (pc_element == s and user_element == p):
+        print("\nUser: ", user_element.title())
+        print("Computer: ", pc_element.title())
+        print("\nUser Won")
+        print("Computer Lost")
         input("\nPress any key to continue...")
 
-# In case if you want to open this module on its own.
+# In case if "you" want to open this module on its own.
 if __name__ == "__main__":
     play()

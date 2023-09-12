@@ -2,7 +2,7 @@
 A simple Rock Paper Scissors game in command line.
 
 ## Screenshot
-
+![Capture1](https://github.com/BazarganDev/Rock-Paper-Scissors/assets/124906353/93aff52e-f939-4dd4-8f36-b825d227d8a7)
 
 ## Play the game
 Clone this repository using Git:

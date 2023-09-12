@@ -1,6 +1,8 @@
 # Rock Paper Scissors
 A simple Rock Paper Scissors game in command line.
 
+# ⚠️ **Work in progress. Bugs may be found** ⚠️
+
 ## Screenshot
 ![Capture1](https://github.com/BazarganDev/Rock-Paper-Scissors/assets/124906353/93aff52e-f939-4dd4-8f36-b825d227d8a7)
 
